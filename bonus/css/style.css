@@ -72,7 +72,7 @@ width: 100%;
 display: flex;
 }
 
-div.grid {
+div.gride {
     height: 500px;
     width: 500px;
     margin: 0 auto;
@@ -82,7 +82,8 @@ div.grid {
     flex-wrap: wrap;
 }
 
-div.grid .square{
+
+div.gride .square{
     width: calc(100% / 10);
     height: calc(100% / 10);
     border: 1px solid black;
@@ -90,7 +91,63 @@ div.grid .square{
     justify-content: center;
     align-items: center;
 }
-.square.clicked{
+
+div.gride .square {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.square.clicked {
+    background-color: aqua;
+}
+/* medium difficult */
+div.gridm {
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+    align-self: center;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+div.gridm .squarem {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.squarem.clicked{
+    background-color: aqua;
+}
+/* hard difficult */
+div.gridh {
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+    align-self: center;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+div.gridh .squareh {
+    width: calc(100% / 8);
+    height: calc(100% / 8);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.squareh.clicked {
     background-color: aqua;
 }
 

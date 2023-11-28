@@ -145,7 +145,7 @@ playButton.addEventListener('click', function(){
 
         //creazione quadratini nella griglia principale
         //ciclo 100 volte la creazione del quadratino
-        for (let i = 1; i <= 64; i++) {
+        for (let i = 1; i <= 49; i++) {
             //dichiaro la variabile n che farà da contatore aLLe interazioni
             let n = i;
             //dichiaro la funzione che crea i quadrati

@@ -139,8 +139,8 @@ div.gridh {
 
 
 div.gridh .squareh {
-    width: calc(100% / 8);
-    height: calc(100% / 8);
+    width: calc(100% / 7);
+    height: calc(100% / 7);
     border: 1px solid black;
     display: flex;
     justify-content: center;

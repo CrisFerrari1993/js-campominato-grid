@@ -25,14 +25,33 @@ playButton.addEventListener('click', function(){
 
     //creazione quadratini nella griglia principale
     //ciclo 100 volte la creazione del quadratino
-    for (let i = 0; i < 100; i++){
+    for (let i = 1; i <= 100; i++){
+        //dichiaro la variabile n che farà da contatore aLLe interazioni
+        let n = i;
+        //dichiaro la funzione che crea i quadrati
+        const newElement = creaElem('div', 'square');
+        //creo la variabile che contiene il numero della casella iterata
+        let nCasella = document.createTextNode(`${n}`);
+        //e lo appendo alla casella generata
+        newElement.append(nCasella);
+        //evento click sulla casella iterata
+        newElement.addEventListener('click',
+        function() {
+            console.log('Hai cliccato la casella n°' + i);
+            newElement.classList.add('clicked');
+        }
         
+       );
+       //appendo alla griglia 100 volte la funzione che crea i quadratini
+       grid.append(newElement);
+       
     }
 
     //funzione crea quadratimi
     function creaElem(tagType, classname) {
         const elementoCorrente = document.createElement(tagType);
         elementoCorrente.classList.add(classname);
+        
 
         return elementoCorrente;
     }

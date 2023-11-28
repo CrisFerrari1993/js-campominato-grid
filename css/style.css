@@ -60,9 +60,9 @@ width: 100%;
 display: flex;
 }
 
-div#grid {
-    width: 600px;
-    height: 600px;
+div.grid {
+    height: 700px;
+    width: 700px;
     margin: 0 auto;
     align-self: center;
     border: 1px solid black;
@@ -70,7 +70,7 @@ div#grid {
     flex-wrap: wrap;
 }
 
-div#grid .square{
+div.grid .square{
     width: calc(100% / 10);
     height: calc(100% / 10);
     border: 1px solid black;
@@ -81,6 +81,7 @@ div#grid .square{
 .square.clicked{
     background-color: aqua;
 }
+
 
 /*******************************
     FOOTER SETTINGS

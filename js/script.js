@@ -29,9 +29,12 @@ playButton.addEventListener('click', function(){
         
     }
 
-
+    //funzione crea quadratimi
     function creaElem(tagType, classname) {
+        const elementoCorrente = document.createElement(tagType);
+        elementoCorrente.classList.add(classname);
 
+        return elementoCorrente;
     }
     }
 );

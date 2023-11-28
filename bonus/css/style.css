@@ -37,6 +37,18 @@ nav h1{
     align-self: center;
     font-weight: 900;
 }
+/* nav form container */
+.nav-form-container{
+    display: flex;
+    justify-content: space-between;
+
+}
+.nav-form-container select,
+.nav-form-container label {
+    display: block;
+    align-self: center;
+    margin-right: 1rem;
+}
 /* nav button */
 nav button {
     position: relative;

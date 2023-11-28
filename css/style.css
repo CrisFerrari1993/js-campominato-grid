@@ -61,8 +61,8 @@ display: flex;
 }
 
 div.grid {
-    height: 700px;
-    width: 700px;
+    height: 500px;
+    width: 500px;
     margin: 0 auto;
     align-self: center;
     border: 1px solid black;

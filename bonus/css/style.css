@@ -147,13 +147,14 @@ div.gride .squareh:active {
     FOOTER SETTINGS
 ********************************/
 footer{
-    height: 5vh;
+    height: 10vh;
+    display: flex;
 }
 .footer-section {
-    padding: 1rem;
     display: flex;
 }
 .footer-section p {
     display: block;
     align-self: center;
+    padding-left: 1rem;
 }

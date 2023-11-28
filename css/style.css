@@ -45,3 +45,55 @@ nav button {
     width: 70px;
     max-height: 30px;
 }
+/*******************************
+    MAIN SETTINGS
+********************************/
+main {
+    height: 85vh;
+    width: 100%;
+}
+
+section.bg-acquamarine {
+background-color: aquamarine;
+height: 100%;
+width: 100%;
+display: flex;
+}
+
+div#grid {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    align-self: center;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div#grid .square{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.square.clicked{
+    background-color: aqua;
+}
+
+
+/*******************************
+    FOOTER SETTINGS
+********************************/
+footer{
+    height: 5vh;
+}
+.footer-section {
+    padding: 1rem;
+    display: flex;
+}
+.footer-section p {
+    display: block;
+    align-self: center;
+}

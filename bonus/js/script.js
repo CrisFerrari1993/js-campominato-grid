@@ -23,6 +23,11 @@ playButton.addEventListener('click', function(){
     difficult = difficult.value;
     
     if (difficult === 'easy'){
+        //se la difficolta è stata settata, andra via la selezione della difficoltà
+        let difficult = document.getElementById('difficolta');
+        difficult.style.display = 'none';
+        let label = document.getElementById('etichetta');
+        label.style.display = 'none';
         //se si riclicca su play, la pagina verrà azzerata
         playButton.removeChild(play);
         let retry = document.createTextNode('Riprova');
@@ -65,33 +70,31 @@ playButton.addEventListener('click', function(){
 
         }
 
-        //funzione crea quadratimi
-        function creaElem(tagType, classname) {
-            const elementoCorrente = document.createElement(tagType);
-            elementoCorrente.classList.add(classname);
-
-
-            return elementoCorrente;
-        }
-    } else if (difficult === 'medium'){
+    };
+    if (difficult === 'medium'){
+        //se la difficolta è stata settata, andra via la selezione della difficoltà
+        let difficult = document.getElementById('difficolta');
+        difficult.style.display = 'none';
+        let label = document.getElementById('etichetta');
+        label.style.display = 'none';
         //se si riclicca su play, la pagina verrà azzerata
         playButton.removeChild(play);
         let retry = document.createTextNode('Riprova');
         playButton.append(retry);
         playButton.addEventListener('click',
-            function () {
-                alert('Comincio nuova partita');
-                history.go(0);
-            }
+        function () {
+            alert('Comincio nuova partita');
+            history.go(0);
+        }
         );
         // dichiarazione della variabile grid
         let grid = document.createElement('div');
         // gli aggiungo la calsse grid
-        grid.classList.add('gridm');
+        grid.classList.add('gride');
         console.log(grid);
         //al click si aggancia l'elemento creato
         playArea.append(grid);
-
+        
         //creazione quadratini nella griglia principale
         //ciclo 100 volte la creazione del quadratino
         for (let i = 1; i <= 81; i++) {
@@ -105,44 +108,41 @@ playButton.addEventListener('click', function(){
             newElement.append(nCasella);
             //evento click sulla casella iterata
             newElement.addEventListener('click',
-                function () {
-                    console.log('Hai cliccato la casella n°' + i);
-                    newElement.classList.add('clicked');
-                }
-
+            function () {
+                console.log('Hai cliccato la casella n°' + i);
+                newElement.classList.add('clicked');
+            }
+            
             );
             //appendo alla griglia 100 volte la funzione che crea i quadratini
             grid.append(newElement);
-
+            
         }
-
-        //funzione crea quadratimi
-        function creaElem(tagType, classname) {
-            const elementoCorrente = document.createElement(tagType);
-            elementoCorrente.classList.add(classname);
-
-
-            return elementoCorrente;
-        }
-    } else {
+    };
+    if(difficult === 'hard') {
+        //se la difficolta è stata settata, andra via la selezione della difficoltà
+        let difficult = document.getElementById('difficolta');
+        difficult.style.display = 'none';
+        let label = document.getElementById('etichetta');
+        label.style.display = 'none';
         //se si riclicca su play, la pagina verrà azzerata
         playButton.removeChild(play);
         let retry = document.createTextNode('Riprova');
         playButton.append(retry);
         playButton.addEventListener('click',
-            function () {
-                alert('Comincio nuova partita');
-                history.go(0);
-            }
+        function () {
+            alert('Comincio nuova partita');
+            history.go(0);
+        }
         );
         // dichiarazione della variabile grid
         let grid = document.createElement('div');
         // gli aggiungo la calsse grid
-        grid.classList.add('gridh');
+        grid.classList.add('gride');
         console.log(grid);
         //al click si aggancia l'elemento creato
         playArea.append(grid);
-
+        
         //creazione quadratini nella griglia principale
         //ciclo 100 volte la creazione del quadratino
         for (let i = 1; i <= 49; i++) {
@@ -156,25 +156,30 @@ playButton.addEventListener('click', function(){
             newElement.append(nCasella);
             //evento click sulla casella iterata
             newElement.addEventListener('click',
-                function () {
-                    console.log('Hai cliccato la casella n°' + i);
-                    newElement.classList.add('clicked');
-                }
-
+            function () {
+                console.log('Hai cliccato la casella n°' + i);
+                newElement.classList.add('clicked');
+            }
+            
             );
             //appendo alla griglia 100 volte la funzione che crea i quadratini
             grid.append(newElement);
-
-        }
-
-        //funzione crea quadratimi
-        function creaElem(tagType, classname) {
-            const elementoCorrente = document.createElement(tagType);
-            elementoCorrente.classList.add(classname);
-
-
-            return elementoCorrente;
+            
         }
     }
+    if(difficult === ''){
+        alert('Scegli la difficolà');
+        let difficult = document.getElementById('difficolta');
+        difficult.style.border = '1px solid red';  
+    };
+
+    //funzione crea quadratimi
+    function creaElem(tagType, classname) {
+        const elementoCorrente = document.createElement(tagType);
+        elementoCorrente.classList.add(classname);
+
+
+        return elementoCorrente;
     }
-);
+    }
+    );
